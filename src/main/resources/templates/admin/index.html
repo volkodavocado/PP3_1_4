@@ -37,9 +37,9 @@
         <div class="col-2 pt-3">
             <div class="nav flex-column nav-pills" id="panel-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link active" id="admin-panel-tab" data-toggle="pill" href="#admin-panel" role="tab"
-                   aria-controls="admin-panel" aria-selected="true">Admin</a>
+                   aria-controls="admin-panel" aria-selected="true">Panel</a>
                 <a class="nav-link" id="user-panel-tab" data-toggle="pill" href="#user-panel" role="tab"
-                   aria-controls="user-panel" aria-selected="false">User</a>
+                   aria-controls="user-panel" aria-selected="false">UserInfo</a>
             </div>
         </div>
 
@@ -219,61 +219,62 @@
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <div class="row justify-content-center text-center font-weight-bold">
-                                                                    <div class="col-6">
-                                                                        <form th:method="POST"
-                                                                              th:action="@{/admin/delete?id={id}(id=${user.id})}">
-                                                                            <div class="form-group">
-                                                                                <label for="formIdDelete">ID</label>
-                                                                                <input type="number"
-                                                                                       class="form-control"
-                                                                                       id="formIdDelete"
-                                                                                       th:placeholder="${user.id}"
-                                                                                       disabled>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="formUsernameDelete">First Name</label>
-                                                                                <input type="text" class="form-control"
-                                                                                       id="formUsernameDelete"
-                                                                                       th:placeholder="${user.username}"
-                                                                                       disabled>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="formLastnameDelete">Last Name</label>
-                                                                                <input type="text" class="form-control"
-                                                                                       id="formLastnameDelete"
-                                                                                       th:placeholder="${user.lastname}"
-                                                                                       disabled>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="formAgeDelete">Age</label>
-                                                                                <input type="number"
-                                                                                       class="form-control"
-                                                                                       id="formAgeDelete"
-                                                                                       th:placeholder="${user.age}"
-                                                                                       disabled>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="formEmailDelete">Email</label>
-                                                                                <input type="email" class="form-control"
-                                                                                       id="formEmailDelete"
-                                                                                       th:placeholder="${user.email}"
-                                                                                       disabled>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="formRoleSelectDelete">Role</label>
-                                                                                <select multiple class="form-control"
-                                                                                        id="formRoleSelectDelete"
-                                                                                        size="2" disabled>
-                                                                                    <option th:each="role : ${user.roles}"
-                                                                                            th:value="${role.id}"
-                                                                                            th:text="${#strings.substring(role.name,5)}"></option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                                <p>Are you sure?</p>
+<!--                                                                <div class="row justify-content-center text-center font-weight-bold">-->
+<!--                                                                    <div class="col-6">-->
+<!--                                                                        <form th:method="POST"-->
+<!--                                                                              th:action="@{/admin/delete?id={id}(id=${user.id})}">-->
+<!--                                                                            <div class="form-group">-->
+<!--                                                                                <label for="formIdDelete">ID</label>-->
+<!--                                                                                <input type="number"-->
+<!--                                                                                       class="form-control"-->
+<!--                                                                                       id="formIdDelete"-->
+<!--                                                                                       th:placeholder="${user.id}"-->
+<!--                                                                                       disabled>-->
+<!--                                                                            </div>-->
+<!--                                                                            <div class="form-group">-->
+<!--                                                                                <label for="formUsernameDelete">First Name</label>-->
+<!--                                                                                <input type="text" class="form-control"-->
+<!--                                                                                       id="formUsernameDelete"-->
+<!--                                                                                       th:placeholder="${user.username}"-->
+<!--                                                                                       disabled>-->
+<!--                                                                            </div>-->
+<!--                                                                            <div class="form-group">-->
+<!--                                                                                <label for="formLastnameDelete">Last Name</label>-->
+<!--                                                                                <input type="text" class="form-control"-->
+<!--                                                                                       id="formLastnameDelete"-->
+<!--                                                                                       th:placeholder="${user.lastname}"-->
+<!--                                                                                       disabled>-->
+<!--                                                                            </div>-->
+<!--                                                                            <div class="form-group">-->
+<!--                                                                                <label for="formAgeDelete">Age</label>-->
+<!--                                                                                <input type="number"-->
+<!--                                                                                       class="form-control"-->
+<!--                                                                                       id="formAgeDelete"-->
+<!--                                                                                       th:placeholder="${user.age}"-->
+<!--                                                                                       disabled>-->
+<!--                                                                            </div>-->
+<!--                                                                            <div class="form-group">-->
+<!--                                                                                <label for="formEmailDelete">Email</label>-->
+<!--                                                                                <input type="email" class="form-control"-->
+<!--                                                                                       id="formEmailDelete"-->
+<!--                                                                                       th:placeholder="${user.email}"-->
+<!--                                                                                       disabled>-->
+<!--                                                                            </div>-->
+<!--                                                                            <div class="form-group">-->
+<!--                                                                                <label for="formRoleSelectDelete">Role</label>-->
+<!--                                                                                <select multiple class="form-control"-->
+<!--                                                                                        id="formRoleSelectDelete"-->
+<!--                                                                                        size="2" disabled>-->
+<!--                                                                                    <option th:each="role : ${user.roles}"-->
+<!--                                                                                            th:value="${role.id}"-->
+<!--                                                                                            th:text="${#strings.substring(role.name,5)}"></option>-->
+<!--                                                                                </select>-->
+<!--                                                                            </div>-->
+<!--                                                                        </form>-->
+<!--                                                                    </div>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary"
                                                                         data-dismiss="modal">Close
@@ -283,6 +284,7 @@
                                                                     <input type="submit" class="btn btn-danger"
                                                                            value="Delete">
                                                                 </form>
+                                                            </div>
                                                             </div>
                                                         </div>
                                                     </div>
